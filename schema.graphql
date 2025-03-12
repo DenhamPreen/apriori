@@ -1,3 +1,8 @@
+type User {
+  id: ID! #  address
+  deposits: [AprMON_Deposit!]! @derivedFrom(field: "owner")
+}
+
 type AprMON_Approval {
   id: ID!
   owner: String!

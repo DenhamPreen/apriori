@@ -31,6 +31,7 @@ import {
   AprMON_WithdrawalFeeUpdated,
   AprMON_WithdrawalFeesAccumulatedUpdated,
   AprMON_WithdrawalWaitTimeUpdated,
+  User
 } from "generated";
 
 AprMON.Approval.handler(async ({ event, context }) => {
@@ -63,6 +64,14 @@ AprMON.Deposit.handler(async ({ event, context }) => {
   };
 
   context.AprMON_Deposit.set(entity);
+
+  let user = await context.User.get(event.params.owner);
+  if (!user) {
+    user = {
+      id: event.params.owner,
+    }
+  } 
+  context.User.set(user);
 });
 
 AprMON.FeeVaultUpdated.handler(async ({ event, context }) => {
