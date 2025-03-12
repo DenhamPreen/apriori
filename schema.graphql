@@ -1,0 +1,171 @@
+type AprMON_Approval {
+  id: ID!
+  owner: String!
+  spender: String!
+  value: BigInt!
+}
+
+type AprMON_BurnableSharesUpdated {
+  id: ID!
+  burnableShares: BigInt!
+}
+
+type AprMON_Deposit {
+  id: ID!
+  sender: String!
+  owner: String!
+  assets: BigInt!
+  shares: BigInt!
+}
+
+type AprMON_FeeVaultUpdated {
+  id: ID!
+  protocolFeeVault: String!
+}
+
+type AprMON_Initialized {
+  id: ID!
+  version: BigInt!
+}
+
+type AprMON_LastProcessedBlockNumberUpdated {
+  id: ID!
+  lastProcessedBlockNumber: BigInt!
+}
+
+type AprMON_LastProcessedRequestIdUpdated {
+  id: ID!
+  lastProcessedRequestId: BigInt!
+}
+
+type AprMON_MinimumRedeemUpdated {
+  id: ID!
+  minimumRedeem: BigInt!
+}
+
+type AprMON_NextRequestIdUpdated {
+  id: ID!
+  nextRequestId: BigInt!
+}
+
+type AprMON_OperatorSet {
+  id: ID!
+  controller: String!
+  operator: String!
+  approved: Boolean!
+}
+
+type AprMON_OracleDataUpdate {
+  id: ID!
+  blockNumber: BigInt!
+  totalPendingDeposit: BigInt!
+  totalStaked: BigInt!
+  burnableShares: BigInt!
+  lastProcessedRequestId: BigInt!
+  rewardFeesAccumulated: BigInt!
+}
+
+type AprMON_OracleOperatorUpdated {
+  id: ID!
+  oracle: String!
+}
+
+type AprMON_OwnershipTransferred {
+  id: ID!
+  previousOwner: String!
+  newOwner: String!
+}
+
+type AprMON_Paused {
+  id: ID!
+  account: String!
+}
+
+type AprMON_Redeem {
+  id: ID!
+  controller: String!
+  receiver: String!
+  requestId: BigInt!
+  shares: BigInt!
+  assets: BigInt!
+  fee: BigInt!
+}
+
+type AprMON_RedeemRequest {
+  id: ID!
+  controller: String!
+  owner: String!
+  requestId: BigInt!
+  sender: String!
+  shares: BigInt!
+  assets: BigInt!
+}
+
+type AprMON_RedeemRequestUpdated {
+  id: ID!
+  requestId: BigInt!
+  redeemData_0: BigInt!
+  redeemData_1: String!
+  redeemData_2: BigInt!
+  redeemData_3: Boolean!
+  redeemData_4: BigInt!
+}
+
+type AprMON_RewardFeeUpdated {
+  id: ID!
+  rewardFee: BigInt!
+}
+
+type AprMON_RewardFeesAccumulatedUpdated {
+  id: ID!
+  rewardFeesAccumulated: BigInt!
+}
+
+type AprMON_StakePoolUpdated {
+  id: ID!
+  stakePool: String!
+}
+
+type AprMON_Sweeped {
+  id: ID!
+  recipient: String!
+  amount: BigInt!
+}
+
+type AprMON_TotalPendingDepositUpdated {
+  id: ID!
+  totalPendingDeposit: BigInt!
+}
+
+type AprMON_TotalStakedUpdated {
+  id: ID!
+  totalStaked: BigInt!
+}
+
+type AprMON_Transfer {
+  id: ID!
+  from: String!
+  to: String!
+  value: BigInt!
+}
+
+type AprMON_Unpaused {
+  id: ID!
+  account: String!
+}
+
+type AprMON_WithdrawalFeeUpdated {
+  id: ID!
+  withdrawalFee: BigInt!
+}
+
+type AprMON_WithdrawalFeesAccumulatedUpdated {
+  id: ID!
+  withdrawalFeesAccumulated: BigInt!
+}
+
+type AprMON_WithdrawalWaitTimeUpdated {
+  id: ID!
+  withdrawalWaitTime: BigInt!
+}
+

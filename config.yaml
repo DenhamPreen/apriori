@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: envio-indexer
+networks:
+- id: 10143
+  start_block: 0
+  contracts:
+  - name: aprMON
+    address:
+    - 0xb2f82D0f38dc453D596Ad40A37799446Cc89274A
+    handler: src/EventHandlers.ts
+    events:
+    - event: Approval(address indexed owner, address indexed spender, uint256 value)
+    - event: BurnableSharesUpdated(uint256 burnableShares)
+    - event: Deposit(address indexed sender, address indexed owner, uint256 assets, uint256 shares)
+    - event: FeeVaultUpdated(address protocolFeeVault)
+    - event: Initialized(uint64 version)
+    - event: LastProcessedBlockNumberUpdated(uint256 lastProcessedBlockNumber)
+    - event: LastProcessedRequestIdUpdated(uint256 lastProcessedRequestId)
+    - event: MinimumRedeemUpdated(uint256 minimumRedeem)
+    - event: NextRequestIdUpdated(uint256 nextRequestId)
+    - event: OperatorSet(address indexed controller, address indexed operator, bool approved)
+    - event: OracleDataUpdate(uint256 blockNumber, uint256 totalPendingDeposit, uint256 totalStaked, uint256 burnableShares, uint256 lastProcessedRequestId, uint256 rewardFeesAccumulated)
+    - event: OracleOperatorUpdated(address oracle)
+    - event: OwnershipTransferred(address indexed previousOwner, address indexed newOwner)
+    - event: Paused(address account)
+    - event: Redeem(address indexed controller, address indexed receiver, uint256 indexed requestId, uint256 shares, uint256 assets, uint256 fee)
+    - event: RedeemRequest(address indexed controller, address indexed owner, uint256 indexed requestId, address sender, uint256 shares, uint256 assets)
+    - event: RedeemRequestUpdated(uint256 requestId, (uint256,address,uint256,bool,uint256) redeemData)
+    - event: RewardFeeUpdated(uint8 rewardFee)
+    - event: RewardFeesAccumulatedUpdated(uint256 rewardFeesAccumulated)
+    - event: StakePoolUpdated(address stakePool)
+    - event: Sweeped(address recipient, uint256 amount)
+    - event: TotalPendingDepositUpdated(uint256 totalPendingDeposit)
+    - event: TotalStakedUpdated(uint256 totalStaked)
+    - event: Transfer(address indexed from, address indexed to, uint256 value)
+    - event: Unpaused(address account)
+    - event: WithdrawalFeeUpdated(uint256 withdrawalFee)
+    - event: WithdrawalFeesAccumulatedUpdated(uint256 withdrawalFeesAccumulated)
+    - event: WithdrawalWaitTimeUpdated(uint256 withdrawalWaitTime)
